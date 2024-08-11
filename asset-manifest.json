@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gaglioceramictile/static/css/main.522c2f98.css",
+    "main.js": "/gaglioceramictile/static/js/main.0e14a6e8.js",
+    "index.html": "/gaglioceramictile/index.html",
+    "main.522c2f98.css.map": "/gaglioceramictile/static/css/main.522c2f98.css.map",
+    "main.0e14a6e8.js.map": "/gaglioceramictile/static/js/main.0e14a6e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.522c2f98.css",
+    "static/js/main.0e14a6e8.js"
+  ]
+}
