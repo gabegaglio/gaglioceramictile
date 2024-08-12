@@ -8,7 +8,8 @@ import Contact from "./Contact.js";
 function App() {
 
   const isMobile = window.innerWidth <= 600;
-  
+  console.log("Inner Width: ", isMobile);
+
   return (
     <div className="App">
      <Header />
