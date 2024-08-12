@@ -3,8 +3,9 @@ import CardContainer1 from "./CardContainer1.js";
 import Services from "./Services.js";
 import CardContainer2 from "./CardContainer2.js";
 import Gallery from "./Gallery.js";
-import Footer from "./Footer.js";
 import Contact from "./Contact.js";
+
+const isMobile = window.innerWidth <= 768;
 function App() {
   return (
     <div className="App">
@@ -12,7 +13,7 @@ function App() {
      <CardContainer1 />
      <Services />
      <CardContainer2/>
-     <Gallery />
+     { isMobile && <Gallery /> }
      <Contact />
     </div>
   );

@@ -60,7 +60,7 @@ body {
 .webHeader {
   font-size: 5em;
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
   margin-inline:auto;
   display: flex;
   align-items: center;
@@ -72,6 +72,7 @@ body {
 .galleryHeader,
 .contactHeader {
   @extend .header;
+  font-weight:normal;
   text-align: center;
   border-radius: 10px;
   width: fit-content;
@@ -107,18 +108,17 @@ body {
   display:flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin-top:0;
+  margin-block:0px;
 }
 
 .cardContainer{ /*card renamed cardContainer*/
   width:90%;
-  margin:20px 20px 0px 20px;
+  margin-inline:20px;
+  margin-block:0px;
   display:grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns, each taking up 1 fraction of the available space */
-  grid-auto-rows:minmax(.5fr,1fr);
-  gap:30px;
-  margin:auto;
+  grid-auto-rows:minmax(.5fr,.5fr);
+  gap:40px;
 }
 
 .cardDiv{ /*cardBox renamed cardDiv*/
@@ -151,10 +151,14 @@ body {
 }
 
 .services{
-  margin-block:10vh;
   width:100vw;
   display:grid;
   place-items:center;
+  margin-block:10vh
+}
+
+.servicesHeader{
+  margin:0px;
 }
 
 .servicesDesc{
@@ -286,12 +290,10 @@ form button{
 }
 
 
-  /*this is done so that the fourth picture isnt alone on certain screen sizes*/
 
   @media (max-width: 1200px ) {
       .cardContainer{
           grid-template-columns: repeat(2, 1fr); /* Two columns */
-          margin-bottom:10vh;
           width:70%;
       }
       .desc{
@@ -306,12 +308,11 @@ form button{
       .cardContainer{
           grid-template-columns: 1fr; /* One column */
           width:60%;
-          margin-bottom:40vh;
       }
 
-      .galleryContainer{ 
+      /*.galleryContainer{ 
         display:none;
-      }
+      }*/
 
       ::placeholder{
         font-size:1em;
