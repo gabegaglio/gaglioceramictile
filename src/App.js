@@ -5,7 +5,7 @@ import CardContainer2 from "./CardContainer2.js";
 import Gallery from "./Gallery.js";
 import Contact from "./Contact.js";
 
-const isMobile = window.innerWidth <= 768;
+const isMobile = window.innerWidth <= 600;
 function App() {
   return (
     <div className="App">
