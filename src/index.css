@@ -17,15 +17,6 @@ body {
   background-position: center;
   background-attachment:fixed;
   text-decoration:none;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.App{
   background-image: linear-gradient(to right top, 
     #ffffff, 
     #ffffff, 
@@ -39,12 +30,25 @@ body {
     #abefff, 
     #b1f7fe, 
     #bbfffb
-      );    
+      );  
+}
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.App{  
   background-repeat:no-repeat;
   background-size:cover;
   background-attachment:fixed;
-  overflow:hidden;
+  overflow:visible;
 }
+
+
 
 .headerDiv{
   display:flex;
