@@ -5,15 +5,17 @@ import CardContainer2 from "./CardContainer2.js";
 import Gallery from "./Gallery.js";
 import Contact from "./Contact.js";
 
-const isMobile = window.innerWidth <= 600;
 function App() {
+
+  const isMobile = window.innerWidth <= 600;
+  
   return (
     <div className="App">
      <Header />
      <CardContainer1 />
      <Services />
      <CardContainer2/>
-     { isMobile && <Gallery /> }
+     { !isMobile && <Gallery /> }
      <Contact />
     </div>
   );
