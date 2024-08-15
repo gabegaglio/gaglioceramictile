@@ -1,2 +1,1 @@
-React app for Gaglio Ceramic Tile
-
+Website for tiling company Gaglio Ceramic TIle
