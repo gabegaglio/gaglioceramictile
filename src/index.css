@@ -33,8 +33,6 @@ body {
       );  
 }
 
-
-
 *,
 *::before,
 *::after {
@@ -47,8 +45,6 @@ body {
   background-attachment:fixed;
   overflow:visible;
 }
-
-
 
 .headerDiv{
   display:flex;
