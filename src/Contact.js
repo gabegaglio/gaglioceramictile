@@ -2,7 +2,7 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="min-h-screen w-full py-20 px-4">
+    <div className="min-h-screen w-full py-10 px-4">
       <div className="max-w-[70%] md:max-w-[30%] mx-auto">
         <h2 className="text-6xl font-light text-center text-gray-800 mb-12">
           Contact Us

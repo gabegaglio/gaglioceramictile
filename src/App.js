@@ -6,7 +6,7 @@ import CardContainer1 from "./CardContainer1";
 import CardContainer2 from "./CardContainer2";
 import Gallery from "./Gallery";
 import Contact from "./Contact";
-
+import Map from "./Map";
 function App() {
   const galleryImages = [
     `${process.env.PUBLIC_URL}/images/gal1.jpg`,
@@ -42,6 +42,10 @@ function App() {
       <main>
         <section id="gallery" className="py-20">
           <Gallery images={galleryImages} />
+        </section>
+
+        <section id="map" className="">
+          <Map />
         </section>
         <section id="contact" className="py-20">
           <Contact />

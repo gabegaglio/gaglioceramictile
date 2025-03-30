@@ -45,7 +45,7 @@ function Gallery({ images }) {
       <div className="w-full py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-light text-center text-gray-800 mb-12">
-            Our Gallery
+            Our Work
           </h2>
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-800"></div>
@@ -59,7 +59,7 @@ function Gallery({ images }) {
     <div className="w-full px-4">
       <div className="w-fit max-w-3xl md:max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-6xl font-light text-center text-gray-800 mb-12">
-          Our Gallery
+          Our Work
         </h2>
         <div className="relative">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 transition-transform duration-500 ease-in-out">

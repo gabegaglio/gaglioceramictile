@@ -5,7 +5,7 @@ function Services() {
     {
       title: "30+ Years of Experience",
       description:
-        "We work with you to create unique and personalized tile designs that match your vision.",
+        "Located in East Brunswick, New Jersey, We work with you to create unique and personalized tile designs that match your vision.",
       icon: "💪",
     },
     {
@@ -17,7 +17,7 @@ function Services() {
     {
       title: "Remodelling",
       description:
-        "Basement remodelling, door installations, drywall, painting, and more.",
+        "We also offer basement remodelling, door installations, drywall, painting, and more!",
       icon: "🔨",
     },
   ];
