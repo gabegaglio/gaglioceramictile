@@ -15,7 +15,7 @@ function Map() {
       </div>
 
       <div className="w-3/4 h-full flex justify-center items-center py-5 text-center">
-        <h1> Located in New Jersey, we serve New Jersey, Staten Island, Brooklyn, & Queens</h1>
+        <h1> Located in New Jersey & Serving New Jersey, Staten Island, Brooklyn, & Queens</h1>
       </div>
     </div>
   );

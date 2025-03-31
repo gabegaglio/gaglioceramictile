@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function CardContainer2() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [inViewCards, setInViewCards] = useState([]);
+  const cardRefs = useRef([]);
 
   const cards = [
     {
@@ -22,16 +25,56 @@ function CardContainer2() {
     },
   ];
 
+  useEffect(() => {
+    cardRefs.current = cardRefs.current.slice(0, cards.length);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = cardRefs.current.indexOf(entry.target);
+          if (entry.isIntersecting && !inViewCards.includes(index)) {
+            setInViewCards((prev) => [...prev, index]);
+          } else if (!entry.isIntersecting && inViewCards.includes(index)) {
+            setInViewCards((prev) => prev.filter((i) => i !== index));
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => {
+      cardRefs.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, [inViewCards]);
+
   return (
     <div className="flex justify-center items-center py-15 px-4">
       <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {cards.map((card, index) => (
-          <div key={index} className="group">
+          <div
+            key={index}
+            className="group"
+            ref={(el) => (cardRefs.current[index] = el)}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
             <div
               className="relative overflow-hidden rounded-2xl shadow-lg bg-white/10 backdrop-blur-md p-8 transition-all duration-300 hover:bg-white/20 cursor-pointer"
               onClick={() => setSelectedImage(card.image)}
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div
+                className={`absolute inset-0 ${
+                  inViewCards.includes(index) && hoveredIndex !== index
+                    ? "opacity-100"
+                    : "opacity-0"
+                } transition-opacity duration-300`}
+              >
                 <img
                   src={card.image}
                   alt={card.title}
@@ -39,9 +82,18 @@ function CardContainer2() {
                 />
                 <div className="absolute inset-0 bg-black/40" />
               </div>
-              <h3 className="text-3xl font-light text-center text-gray-800 group-hover:text-white transition-colors duration-300 relative z-10">
+              <h3
+                className={`text-3xl font-light text-center ${
+                  inViewCards.includes(index) && hoveredIndex !== index
+                    ? "text-white"
+                    : "text-gray-800"
+                } transition-colors duration-300 relative z-10`}
+              >
                 {card.title}
               </h3>
+              {hoveredIndex === index && (
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-md border border-white/30 transition-all duration-300 z-5"></div>
+              )}
             </div>
           </div>
         ))}

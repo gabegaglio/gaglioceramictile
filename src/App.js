@@ -8,20 +8,7 @@ import Gallery from "./Gallery";
 import Contact from "./Contact";
 import Map from "./Map";
 function App() {
-  const galleryImages = [
-    `${process.env.PUBLIC_URL}/images/gal1.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal2.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal3.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal4.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal5.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal6.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal7.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal8.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal9.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal10.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal11.jpg`,
-    `${process.env.PUBLIC_URL}/images/gal12.jpg`,
-  ];
+ 
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -41,7 +28,7 @@ function App() {
       <CardContainer2 />
       <main>
         <section id="gallery" className="py-20">
-          <Gallery images={galleryImages} />
+          <Gallery/>
         </section>
 
         <section id="map" className="">
