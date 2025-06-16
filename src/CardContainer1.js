@@ -83,7 +83,7 @@ function CardContainer1() {
                 <div className="absolute inset-0 bg-black/40" />
               </div>
               <h3
-                className={`text-3xl font-light text-center text-gray-800 transition-colors duration-1000 relative z-10 ${
+                className={`text-3xl font-light text-center text-black transition-colors duration-1000 relative z-10 ${
                   inViewCards.includes(index) && hoveredIndex !== index
                     ? "text-white"
                     : ""

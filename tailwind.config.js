@@ -11,6 +11,22 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "Noto Sans",
+          "sans-serif",
+        ],
+        inter: ["Inter", "sans-serif"],
+      },
       backgroundImage: {
         "custom-gradient": `linear-gradient(to right top, 
           #ffffff, 

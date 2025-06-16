@@ -8,53 +8,53 @@ function Backsplashes() {
         <div className="group">
           <div className="relative overflow-hidden rounded-2xl shadow-lg">
             <img
-              src={`${process.env.PUBLIC_URL}/images/backsplash1.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/backsplash.jpg`}
               alt="backsplash tile"
               className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
-          <p className="mt-6 text-3xl font-light text-center text-gray-800">
-            Backsplash 1
+          <p className="mt-6 text-3xl font-light text-center text-black">
+            Kitchen Backsplash
           </p>
         </div>
         <div className="group">
           <div className="relative overflow-hidden rounded-2xl shadow-lg">
             <img
-              src={`${process.env.PUBLIC_URL}/images/backsplash2.jpg`}
-              alt="backsplash tile"
+              src={`${process.env.PUBLIC_URL}/images/kitchen.jpg`}
+              alt="kitchen tile"
               className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
-          <p className="mt-6 text-3xl font-light text-center text-gray-800">
-            Backsplash 2
+          <p className="mt-6 text-3xl font-light text-center text-black">
+            Kitchen Design
           </p>
         </div>
         <div className="group">
           <div className="relative overflow-hidden rounded-2xl shadow-lg">
             <img
-              src={`${process.env.PUBLIC_URL}/images/backsplash3.jpg`}
-              alt="backsplash tile"
+              src={`${process.env.PUBLIC_URL}/images/bathroom2.jpg`}
+              alt="bathroom tile"
               className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
-          <p className="mt-6 text-3xl font-light text-center text-gray-800">
-            Backsplash 3
+          <p className="mt-6 text-3xl font-light text-center text-black">
+            Bathroom Design
           </p>
         </div>
         <div className="group">
           <div className="relative overflow-hidden rounded-2xl shadow-lg">
             <img
-              src={`${process.env.PUBLIC_URL}/images/backsplash4.jpg`}
-              alt="backsplash tile"
+              src={`${process.env.PUBLIC_URL}/images/niche.jpg`}
+              alt="niche tile"
               className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
-          <p className="mt-6 text-3xl font-light text-center text-gray-800">
-            Backsplash 4
+          <p className="mt-6 text-3xl font-light text-center text-black">
+            Niche Design
           </p>
         </div>
       </div>
@@ -62,4 +62,4 @@ function Backsplashes() {
   );
 }
 
-export default Backsplashes; 
+export default Backsplashes;

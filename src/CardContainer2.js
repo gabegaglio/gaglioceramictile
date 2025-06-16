@@ -86,7 +86,7 @@ function CardContainer2() {
                 className={`text-3xl font-light text-center ${
                   inViewCards.includes(index) && hoveredIndex !== index
                     ? "text-white"
-                    : "text-gray-800"
+                    : "text-black"
                 } transition-colors duration-300 relative z-10`}
               >
                 {card.title}

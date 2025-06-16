@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <section className="w-screen h-screen flex flex-col items-center justify-center">
-      <h1 className="text-6xl md:text-8xl font-light text-gray-800 mb-8 text-center">
+      <h1 className="text-6xl md:text-8xl font-light text-black mb-8 text-center">
         Gaglio Ceramic Tile
       </h1>
       <div className="flex space-x-8">
