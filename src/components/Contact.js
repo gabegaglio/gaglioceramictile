@@ -4,15 +4,16 @@ import Map from "./Map";
 
 function Contact() {
   return (
-    <section id="contact" className="py-8 md:py-20 relative">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+    <section id="contact" className="py-16 md:py-28 relative overflow-hidden">
+      {/* Blurred Background */}
+      <div className="absolute inset-0 z-0">
         <img
           src={`${process.env.PUBLIC_URL}/images/gal3.jpg`}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-110"
+          style={{ filter: "blur(20px)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-gray-600/50"></div>
+        <div className="absolute inset-0 bg-stone-50/85"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
@@ -21,106 +22,101 @@ function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-14 md:mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-light text-gray-900 mb-4 md:mb-6">
-            Get In Touch
+          <p className="text-xs tracking-[0.3em] uppercase text-stone-400 font-medium mb-4">
+            Start Your Project
+          </p>
+          <h2 className="font-serif text-4xl md:text-6xl font-light text-stone-800 mb-5">
+            Contact Us
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-stone-500 max-w-2xl mx-auto leading-relaxed">
             Ready to start your project? We'd love to hear from you. Contact us
             today for a free consultation and quote.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-14">
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-10 border border-white/10 shadow-2xl"
+            className="bg-white rounded-sm p-8 md:p-10 shadow-sm border border-stone-200/50"
           >
             <div className="mb-8">
-              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-4">
+              <h3 className="font-serif text-2xl md:text-3xl font-light text-stone-800 mb-3">
                 Let's Start Your Project
               </h3>
-              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                Ready to transform your space? Fill out the form below and we'll get back to you as soon as possible.
+              <p className="text-stone-500 text-sm leading-relaxed">
+                Fill out the form below and we'll get back to you within 24
+                hours.
               </p>
             </div>
 
             <form
               action="https://formspree.io/f/xrbzzzjg"
               method="POST"
-              className="space-y-6"
+              className="space-y-5"
             >
-              {/* Name and Email Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="group">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-semibold text-gray-800 mb-3 group-focus-within:text-gray-900 transition-colors"
+                    className="block text-xs font-medium tracking-wide uppercase text-stone-500 mb-2"
                   >
                     Full Name *
                   </label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full bg-white/60 backdrop-blur-sm border-2 border-gray-200/50 rounded-2xl px-5 py-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900/30 focus:bg-white/80 focus:ring-4 focus:ring-gray-900/10 transition-all duration-300 hover:bg-white/70"
-                      placeholder="Full Name"
-                    />
-                  </div>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full bg-stone-50 border border-stone-200 rounded-sm px-4 py-3.5 text-stone-800 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 focus:ring-1 focus:ring-stone-400/20 transition-all duration-200"
+                    placeholder="Full Name"
+                  />
                 </div>
 
-                <div className="group">
+                <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold text-gray-800 mb-3 group-focus-within:text-gray-900 transition-colors"
+                    className="block text-xs font-medium tracking-wide uppercase text-stone-500 mb-2"
                   >
                     Email Address *
                   </label>
-                  <div className="relative">
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full bg-white/60 backdrop-blur-sm border-2 border-gray-200/50 rounded-2xl px-5 py-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900/30 focus:bg-white/80 focus:ring-4 focus:ring-gray-900/10 transition-all duration-300 hover:bg-white/70"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone Number */}
-              <div className="group">
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-semibold text-gray-800 mb-3 group-focus-within:text-gray-900 transition-colors"
-                >
-                  Phone Number *
-                </label>
-                <div className="relative">
                   <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
+                    type="email"
+                    id="email"
+                    name="email"
                     required
-                    className="w-full bg-white/60 backdrop-blur-sm border-2 border-gray-200/50 rounded-2xl px-5 py-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900/30 focus:bg-white/80 focus:ring-4 focus:ring-gray-900/10 transition-all duration-300 hover:bg-white/70"
-                    placeholder="(123) 456-7890"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-sm px-4 py-3.5 text-stone-800 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 focus:ring-1 focus:ring-stone-400/20 transition-all duration-200"
+                    placeholder="your@email.com"
                   />
                 </div>
               </div>
 
-              {/* Project Type Selection */}
-              <div className="group">
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-xs font-medium tracking-wide uppercase text-stone-500 mb-2"
+                >
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  className="w-full bg-stone-50 border border-stone-200 rounded-sm px-4 py-3.5 text-stone-800 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 focus:ring-1 focus:ring-stone-400/20 transition-all duration-200"
+                  placeholder="(123) 456-7890"
+                />
+              </div>
+
+              <div>
                 <label
                   htmlFor="project-type"
-                  className="block text-sm font-semibold text-gray-800 mb-3 group-focus-within:text-gray-900 transition-colors"
+                  className="block text-xs font-medium tracking-wide uppercase text-stone-500 mb-2"
                 >
                   Project Type
                 </label>
@@ -128,7 +124,7 @@ function Contact() {
                   <select
                     id="project-type"
                     name="project-type"
-                    className="w-full bg-white/60 backdrop-blur-sm border-2 border-gray-200/50 rounded-2xl px-5 py-4 text-gray-900 focus:outline-none focus:border-gray-900/30 focus:bg-white/80 focus:ring-4 focus:ring-gray-900/10 transition-all duration-300 hover:bg-white/70 appearance-none cursor-pointer"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-sm px-4 py-3.5 text-stone-800 text-sm focus:outline-none focus:border-stone-400 focus:ring-1 focus:ring-stone-400/20 transition-all duration-200 appearance-none cursor-pointer"
                   >
                     <option value="">Select your project type</option>
                     <option value="kitchen">Kitchen Renovation</option>
@@ -138,112 +134,9 @@ function Contact() {
                     <option value="commercial">Commercial Project</option>
                     <option value="other">Other</option>
                   </select>
-                  <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none">
-                    <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Budget Range */}
-              <div className="group">
-                <label
-                  htmlFor="budget"
-                  className="block text-sm font-semibold text-gray-800 mb-3 group-focus-within:text-gray-900 transition-colors"
-                >
-                  Estimated Budget Range
-                </label>
-                <div className="relative">
-                  <select
-                    id="budget"
-                    name="budget"
-                    className="w-full bg-white/60 backdrop-blur-sm border-2 border-gray-200/50 rounded-2xl px-5 py-4 text-gray-900 focus:outline-none focus:border-gray-900/30 focus:bg-white/80 focus:ring-4 focus:ring-gray-900/10 transition-all duration-300 hover:bg-white/70 appearance-none cursor-pointer"
-                  >
-                    <option value="">Select budget range (optional)</option>
-                    <option value="under-5k">Under $5,000</option>
-                    <option value="5k-15k">$5,000 - $15,000</option>
-                    <option value="15k-30k">$15,000 - $30,000</option>
-                    <option value="30k-50k">$30,000 - $50,000</option>
-                    <option value="over-50k">Over $50,000</option>
-                    <option value="discuss">Prefer to discuss</option>
-                  </select>
-                  <div className="absolute inset-y-0 right-5 flex items-center pointer-events-none">
-                    <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Project Details */}
-              <div className="group">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold text-gray-800 mb-3 group-focus-within:text-gray-900 transition-colors"
-                >
-                  Project Details *
-                </label>
-                <div className="relative">
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    className="w-full bg-white/60 backdrop-blur-sm border-2 border-gray-200/50 rounded-2xl px-5 py-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-gray-900/30 focus:bg-white/80 focus:ring-4 focus:ring-gray-900/10 transition-all duration-300 hover:bg-white/70 resize-none"
-                    placeholder="Tell us about your project, location, timeline, and any specific requirements."
-                  ></textarea>
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  className="group relative w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white font-semibold py-5 px-8 rounded-2xl overflow-hidden transition-all duration-300 hover:from-gray-800 hover:to-gray-700 hover:scale-[1.02] hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-gray-900/20"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-3">
-                    <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                    Send Message
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                </button>
-              </div>
-
-              {/* Form Footer */}
-              <div className="pt-4 border-t border-gray-200/30">
-                <p className="text-sm text-gray-600 text-center">
-                  We respect your privacy and will never share your information.
-                  <br />
-                  Expect a response within 24 hours.
-                </p>
-              </div>
-            </form>
-          </motion.div>
-
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="space-y-6 md:space-y-8"
-          >
-            {/* Company Info */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-8 border border-white/20 shadow-xl">
-             
-              {/* Map */}
-              <div className="h-64 rounded-2xl overflow-hidden mb-4 md:mb-6 border border-white/20">
-                <Map />
-              </div>
-
-              <div className="space-y-3 md:space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/30 backdrop-blur-md p-3 rounded-xl border border-white/20">
+                  <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                     <svg
-                      className="h-6 w-6 text-gray-700"
+                      className="w-4 h-4 text-stone-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -251,20 +144,126 @@ function Contact() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={1.5}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="budget"
+                  className="block text-xs font-medium tracking-wide uppercase text-stone-500 mb-2"
+                >
+                  Estimated Budget
+                </label>
+                <div className="relative">
+                  <select
+                    id="budget"
+                    name="budget"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-sm px-4 py-3.5 text-stone-800 text-sm focus:outline-none focus:border-stone-400 focus:ring-1 focus:ring-stone-400/20 transition-all duration-200 appearance-none cursor-pointer"
+                  >
+                    <option value="">Select budget range (optional)</option>
+                    <option value="under-5k">Under $5,000</option>
+                    <option value="5k-15k">$5,000 – $15,000</option>
+                    <option value="15k-30k">$15,000 – $30,000</option>
+                    <option value="30k-50k">$30,000 – $50,000</option>
+                    <option value="over-50k">Over $50,000</option>
+                    <option value="discuss">Prefer to discuss</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                    <svg
+                      className="w-4 h-4 text-stone-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-xs font-medium tracking-wide uppercase text-stone-500 mb-2"
+                >
+                  Project Details *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={5}
+                  className="w-full bg-stone-50 border border-stone-200 rounded-sm px-4 py-3.5 text-stone-800 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 focus:ring-1 focus:ring-stone-400/20 transition-all duration-200 resize-none"
+                  placeholder="Tell us about your project, location, timeline, and any specific requirements."
+                ></textarea>
+              </div>
+
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="w-full bg-stone-800 text-white text-sm font-medium tracking-widest uppercase py-4 px-8 rounded-sm hover:bg-stone-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-stone-800/20 focus:ring-offset-2"
+                >
+                  Send Message
+                </button>
+              </div>
+
+              <p className="text-xs text-stone-400 text-center pt-2">
+                We respect your privacy and will never share your information.
+              </p>
+            </form>
+          </motion.div>
+
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            {/* Map */}
+            <div className="bg-white rounded-sm overflow-hidden shadow-sm border border-stone-200/50">
+              <div className="h-72">
+                <Map />
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="text-stone-400 mt-0.5">
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
                         d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                       />
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={1.5}
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Location</h4>
-                    <p className="text-gray-600">
+                    <h4 className="font-medium text-stone-700 text-sm mb-0.5">
+                      Location
+                    </h4>
+                    <p className="text-stone-500 text-sm">
                       Gaglio Ceramic Tile
                       <br />
                       East Brunswick, NJ 08816
@@ -273,9 +272,9 @@ function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-white/30 backdrop-blur-md p-3 rounded-xl border border-white/20">
+                  <div className="text-stone-400 mt-0.5">
                     <svg
-                      className="h-6 w-6 text-gray-700"
+                      className="h-5 w-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -283,38 +282,40 @@ function Contact() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={1.5}
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">gaglioceramictile@gmail.com</p>
+                    <h4 className="font-medium text-stone-700 text-sm mb-0.5">
+                      Email
+                    </h4>
+                    <p className="text-stone-500 text-sm">
+                      gaglioceramictile@gmail.com
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Business Hours */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-8 border border-white/20 shadow-xl">
-              <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-4 md:mb-6">
+            <div className="bg-white rounded-sm p-6 shadow-sm border border-stone-200/50">
+              <h3 className="font-serif text-xl font-light text-stone-800 mb-4">
                 Business Hours
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2.5">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 text-sm md:text-base">
-                    Monday - Saturday
+                  <span className="text-stone-500 text-sm">
+                    Monday – Saturday
                   </span>
-                  <span className="text-gray-900 font-medium text-sm md:text-base">
-                    9:00 AM - 4:00 PM
+                  <span className="text-stone-700 font-medium text-sm">
+                    9:00 AM – 4:00 PM
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 text-sm md:text-base">
-                    Sunday
-                  </span>
-                  <span className="text-gray-900 font-medium text-sm md:text-base">
+                  <span className="text-stone-500 text-sm">Sunday</span>
+                  <span className="text-stone-700 font-medium text-sm">
                     Closed
                   </span>
                 </div>
@@ -322,19 +323,19 @@ function Contact() {
             </div>
 
             {/* Social Media */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-8 border border-white/20 shadow-xl">
-              <h3 className="text-xl md:text-2xl font-light text-gray-900 mb-4 md:mb-6">
+            <div className="bg-white rounded-sm p-6 shadow-sm border border-stone-200/50">
+              <h3 className="font-serif text-xl font-light text-stone-800 mb-4">
                 Follow Our Work
               </h3>
-              <div className="flex gap-4">
+              <div className="flex gap-3">
                 <a
                   href="https://facebook.com/gctile"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/30 backdrop-blur-md text-gray-700 p-4 rounded-xl hover:bg-white/40 transition-all duration-300 border border-white/20 hover:scale-110"
+                  className="text-stone-400 hover:text-stone-700 p-3 border border-stone-200 rounded-sm hover:border-stone-300 transition-all duration-300"
                 >
                   <svg
-                    className="h-6 w-6"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -345,10 +346,10 @@ function Contact() {
                   href="https://instagram.com/gaglioceramictile"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/30 backdrop-blur-md text-gray-700 p-4 rounded-xl hover:bg-white/40 transition-all duration-300 border border-white/20 hover:scale-110"
+                  className="text-stone-400 hover:text-stone-700 p-3 border border-stone-200 rounded-sm hover:border-stone-300 transition-all duration-300"
                 >
                   <svg
-                    className="h-6 w-6"
+                    className="h-5 w-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >

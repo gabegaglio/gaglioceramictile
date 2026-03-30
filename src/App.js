@@ -15,17 +15,20 @@ function App() {
 
   return (
     <LazyMotion features={domAnimation}>
-      <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-gray-50 to-stone-100 text-gray-900 overflow-x-hidden">
+      <div className="min-h-screen w-full bg-stone-50 text-stone-900 overflow-x-hidden">
         <Header scrollToSection={scrollToSection} />
 
-        {/* Hero Section with Featured Work */}
-        <section className="relative py-8 md:py-20 px-4 w-full">
+        {/* Featured Work Section */}
+        <section className="relative py-16 md:py-28 px-4 w-full">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-4xl md:text-6xl font-light text-gray-900 mb-4 md:mb-6">
+            <div className="text-center mb-14 md:mb-20">
+              <p className="text-xs tracking-[0.3em] uppercase text-stone-400 font-medium mb-4">
+                Featured Projects
+              </p>
+              <h2 className="font-serif text-4xl md:text-6xl font-light text-stone-800 mb-5">
                 Crafting Beautiful Spaces
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-stone-500 max-w-2xl mx-auto leading-relaxed">
                 With over 30 years of experience, we transform your vision into
                 reality through expert tile installation, custom designs, and
                 comprehensive remodeling services.
@@ -33,53 +36,53 @@ function App() {
             </div>
 
             {/* Featured Work Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
-              <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-12 md:mb-16">
+              <div className="relative group overflow-hidden aspect-[4/3]">
                 <img
                   src={`${process.env.PUBLIC_URL}/images/kitchen.jpg`}
                   alt="Kitchen Installation"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
-                <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 text-white">
-                  <h3 className="text-xl md:text-2xl font-light mb-1 md:mb-2">
+                <div className="absolute inset-0 bg-stone-900/20 group-hover:bg-stone-900/40 transition-colors duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                  <h3 className="font-serif text-xl md:text-2xl font-light text-white mb-1">
                     Kitchen Remodel
                   </h3>
-                  <p className="text-white/80 text-sm md:text-base">
-                    Custom backsplash & flooring
+                  <p className="text-white/70 text-sm">
+                    Custom backsplash &amp; flooring
                   </p>
                 </div>
               </div>
 
-              <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
+              <div className="relative group overflow-hidden aspect-[4/3]">
                 <img
                   src={`${process.env.PUBLIC_URL}/images/bathroom2.jpg`}
                   alt="Bathroom Installation"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
-                <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 text-white">
-                  <h3 className="text-xl md:text-2xl font-light mb-1 md:mb-2">
+                <div className="absolute inset-0 bg-stone-900/20 group-hover:bg-stone-900/40 transition-colors duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                  <h3 className="font-serif text-xl md:text-2xl font-light text-white mb-1">
                     Bathroom Design
                   </h3>
-                  <p className="text-white/80 text-sm md:text-base">
+                  <p className="text-white/70 text-sm">
                     Luxury tile installation
                   </p>
                 </div>
               </div>
 
-              <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
+              <div className="relative group overflow-hidden aspect-[4/3]">
                 <img
                   src={`${process.env.PUBLIC_URL}/images/fireplace1.jpg`}
                   alt="Fireplace Installation"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
-                <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 text-white">
-                  <h3 className="text-xl md:text-2xl font-light mb-1 md:mb-2">
+                <div className="absolute inset-0 bg-stone-900/20 group-hover:bg-stone-900/40 transition-colors duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                  <h3 className="font-serif text-xl md:text-2xl font-light text-white mb-1">
                     Fireplace
                   </h3>
-                  <p className="text-white/80 text-sm md:text-base">
+                  <p className="text-white/70 text-sm">
                     Custom stone work
                   </p>
                 </div>
@@ -99,22 +102,29 @@ function App() {
         <Contact />
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12 w-full">
+        <footer className="bg-stone-900 text-white py-14 w-full">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
               <div>
-                <h3 className="text-2xl font-light mb-4">
-                  Gaglio Ceramic Tile
+                <h3 className="flex items-baseline gap-2 mb-4">
+                  <span className="font-serif italic text-3xl text-white">
+                    Gaglio
+                  </span>
+                  <span className="font-serif text-xs tracking-[0.2em] uppercase text-stone-400">
+                    Ceramic Tile
+                  </span>
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-stone-400 leading-relaxed text-sm">
                   Transforming spaces with precision, artistry, and over 30
                   years of experience in tile installation and remodeling.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-lg font-medium mb-4">Services</h4>
-                <ul className="space-y-2 text-gray-400">
+                <h4 className="font-serif text-lg font-light mb-4 text-stone-200">
+                  Services
+                </h4>
+                <ul className="space-y-2 text-stone-400 text-sm">
                   <li>Kitchen Renovations</li>
                   <li>Bathroom Installations</li>
                   <li>Fireplace Design</li>
@@ -124,28 +134,30 @@ function App() {
               </div>
 
               <div>
-                <h4 className="text-lg font-medium mb-4">Contact Info</h4>
-                <div className="space-y-2 text-gray-400">
+                <h4 className="font-serif text-lg font-light mb-4 text-stone-200">
+                  Contact
+                </h4>
+                <div className="space-y-2 text-stone-400 text-sm">
                   <p>East Brunswick, NJ 08816</p>
                   <p>gaglioceramictile@gmail.com</p>
-                  <p>Mon-Sat: 9:00 AM - 4:00 PM</p>
+                  <p>Mon–Sat: 9:00 AM – 4:00 PM</p>
                 </div>
               </div>
             </div>
 
-            <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">
-                © 2024 Gaglio Ceramic Tile. All rights reserved.
+            <div className="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+              <p className="text-stone-500 text-xs tracking-wide">
+                &copy; 2024 Gaglio Ceramic Tile. All rights reserved.
               </p>
-              <div className="flex space-x-4 mt-4 md:mt-0">
+              <div className="flex gap-5 mt-4 md:mt-0">
                 <a
                   href="https://facebook.com/gctile"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-stone-500 hover:text-white transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -156,10 +168,10 @@ function App() {
                   href="https://instagram.com/gaglioceramictile"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-stone-500 hover:text-white transition-colors duration-300"
                 >
                   <svg
-                    className="h-5 w-5"
+                    className="h-4 w-4"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >

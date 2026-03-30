@@ -9,7 +9,7 @@ function Services() {
         "Located in East Brunswick, New Jersey. We work with you to create unique and personalized tile designs that match your vision.",
       icon: (
         <svg
-          className="w-8 h-8"
+          className="w-7 h-7"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ function Services() {
         "Our expertise ensures flawless tile installation for kitchens, bathrooms, floors, fireplaces, and more with precision and care.",
       icon: (
         <svg
-          className="w-8 h-8"
+          className="w-7 h-7"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -43,7 +43,7 @@ function Services() {
           />
         </svg>
       ),
-      image: `${process.env.PUBLIC_URL}/images/kitchen.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/flooring.jpg`,
     },
     {
       title: "Complete Remodeling",
@@ -51,7 +51,7 @@ function Services() {
         "Beyond tile work, we offer comprehensive remodeling services including basement finishing, door installations, drywall, and painting.",
       icon: (
         <svg
-          className="w-8 h-8"
+          className="w-7 h-7"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -64,61 +64,62 @@ function Services() {
           />
         </svg>
       ),
-      image: `${process.env.PUBLIC_URL}/images/bathroom2.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/niche.jpg`,
     },
   ];
 
   return (
-    <section className="py-8 md:py-20 px-4 relative">
+    <section className="py-16 md:py-28 px-4 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-14 md:mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-light text-gray-900 mb-4 md:mb-6">
-            Our Services
+          <p className="text-xs tracking-[0.3em] uppercase text-stone-400 font-medium mb-4">
+            Our Expertise
+          </p>
+          <h2 className="font-serif text-4xl md:text-6xl font-light text-stone-800 mb-5">
+            What We Do
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-stone-500 max-w-2xl mx-auto leading-relaxed">
             From concept to completion, we deliver exceptional craftsmanship and
             personalized service for every project.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.8, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/3] md:h-[500px] md:aspect-auto"
+              className="group relative overflow-hidden aspect-[4/3] md:h-[500px] md:aspect-auto"
             >
-              {/* Background Image */}
               <div className="absolute inset-0">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/30 to-transparent"></div>
               </div>
 
-              {/* Content */}
               <div className="relative z-10 h-full flex flex-col justify-end p-6 md:p-8">
-                <div className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 transform group-hover:translate-y-[-8px]">
-                  <div className="flex items-center mb-3 md:mb-4">
-                    <div className="text-white/90 mr-3 md:mr-4">
+                <div className="transform group-hover:translate-y-[-4px] transition-transform duration-500">
+                  <div className="flex items-center mb-3">
+                    <div className="text-white/70 mr-3">
                       {service.icon}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-light text-white">
+                    <h3 className="font-serif text-xl md:text-2xl font-light text-white">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                  <p className="text-white/65 leading-relaxed text-sm">
                     {service.description}
                   </p>
                 </div>
@@ -127,49 +128,28 @@ function Services() {
           ))}
         </div>
 
-        {/* Additional Service Stats */}
+        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8"
+          className="mt-20 md:mt-28 grid grid-cols-3 gap-6 md:gap-12 max-w-3xl mx-auto"
         >
-          {/* 30+ Years Experience */}
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 mb-1 md:mb-2">
-                30+
+          {[
+            { value: "30+", label: "Years Experience" },
+            { value: "500+", label: "Projects Completed" },
+            { value: "100%", label: "Quality Guaranteed" },
+          ].map((stat, i) => (
+            <div key={i} className="text-center">
+              <div className="font-serif text-3xl md:text-5xl font-light text-stone-800 mb-1">
+                {stat.value}
               </div>
-              <div className="text-gray-600 text-xs md:text-sm lg:text-base">
-                Years Experience
-              </div>
-            </div>
-          </div>
-
-          {/* 500+ Projects Completed */}
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 mb-1 md:mb-2">
-                500+
-              </div>
-              <div className="text-gray-600 text-xs md:text-sm lg:text-base">
-                Projects Completed
+              <div className="text-stone-400 text-xs md:text-sm tracking-wide">
+                {stat.label}
               </div>
             </div>
-          </div>
-
-          {/* 100% Quality Guaranteed - Will be in middle on mobile with 2-col grid */}
-          <div className="text-center col-span-2 md:col-span-1">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 mx-auto max-w-xs md:max-w-none">
-              <div className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 mb-1 md:mb-2">
-                100%
-              </div>
-              <div className="text-gray-600 text-xs md:text-sm lg:text-base">
-                Quality Guaranteed
-              </div>
-            </div>
-          </div>
+          ))}
         </motion.div>
       </div>
     </section>
