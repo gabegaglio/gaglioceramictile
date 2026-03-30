@@ -13,19 +13,27 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          "Inter",
+          "DM Sans",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
-          "Roboto",
           "Helvetica Neue",
           "Arial",
-          "Noto Sans",
           "sans-serif",
         ],
-        inter: ["Inter", "sans-serif"],
+        serif: [
+          "Cormorant Garamond",
+          "Georgia",
+          "Cambria",
+          "Times New Roman",
+          "serif",
+        ],
+        script: ["Italianno", "cursive"],
+        display: ["Playfair Display", "Georgia", "serif"],
+        grotesk: ["Space Grotesk", "system-ui", "sans-serif"],
+        lora: ["Lora", "Georgia", "serif"],
       },
       backgroundImage: {
         "custom-gradient": `linear-gradient(to right top, 
