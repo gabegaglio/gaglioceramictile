@@ -29,7 +29,6 @@ const SERVICE_ITEMS = [
   "Recessed niches, benches & ledges",
   "Fireplace surrounds, hearths & facings",
   "Floor prep, mud work & leveling",
-  "Drywall repair, skim coating & painting",
   "Full remodeling coordination from concept to completion",
 ];
 
@@ -45,8 +44,8 @@ function Services({ scrollToSection }) {
         </div>
         <div className="section-body services-combined-intro">
           With over 30 years of experience, we transform your vision into
-          reality through expert tile installation, custom layouts, and
-          comprehensive remodeling—from concept to completion—with the same
+          reality through expert tile and stone installation, custom layouts,
+          and coordinated project work—from concept to completion—with the same
           care we bring to every home.
         </div>
 
