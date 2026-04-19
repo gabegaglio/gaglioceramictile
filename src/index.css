@@ -187,8 +187,10 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
     margin: 0;
     padding: 0;
+    background: #f6f3ec;
+    color: #1a1916;
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   }
 }

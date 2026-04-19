@@ -1,13 +1,13 @@
-// Get height classes for fluid bento layout
+// Get height classes for fluid bento layout (compact on mobile + desktop)
 export const getHeightClass = (height) => {
   switch (height) {
     case "tall":
-      return "h-[240px] md:h-[320px] lg:h-[400px]";
+      return "h-[180px] md:h-[260px] lg:h-[300px]";
     case "medium":
-      return "h-[180px] md:h-[240px] lg:h-[280px]";
+      return "h-[130px] md:h-[190px] lg:h-[220px]";
     case "short":
-      return "h-[120px] md:h-[180px] lg:h-[220px]";
+      return "h-[96px] md:h-[140px] lg:h-[170px]";
     default:
-      return "h-[180px] md:h-[240px] lg:h-[280px]";
+      return "h-[130px] md:h-[190px] lg:h-[220px]";
   }
 };
