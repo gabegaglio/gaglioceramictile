@@ -1,3 +1,13 @@
+/** Strip leading "Room 12 —" style tag; keep only the human-readable description. */
+export function lightboxDisplayCaption(title) {
+  if (!title) return "";
+  const sep = " — ";
+  const i = title.indexOf(sep);
+  if (i === -1) return title;
+  const rest = title.slice(i + sep.length).trim();
+  return rest || title;
+}
+
 // Get height classes for fluid bento layout (compact on mobile + desktop)
 export const getHeightClass = (height) => {
   switch (height) {

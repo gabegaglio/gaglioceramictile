@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { getHeightClass } from "../utils/galleryHelpers";
+import { getHeightClass, lightboxDisplayCaption } from "../utils/galleryHelpers";
 
 const GalleryItem = ({ project, index, onImageClick }) => (
   <motion.div
@@ -12,12 +12,14 @@ const GalleryItem = ({ project, index, onImageClick }) => (
   >
     <img
       src={project.src}
-      alt={project.title}
+      alt={lightboxDisplayCaption(project.title)}
       className="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-105"
       draggable={false}
     />
     <div className="port-overlay">
-      <div className="port-label">{project.title}</div>
+      <div className="port-label">
+        {lightboxDisplayCaption(project.title)}
+      </div>
     </div>
   </motion.div>
 );

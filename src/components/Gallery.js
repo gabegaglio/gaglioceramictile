@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useGalleryData } from "../hooks/useGalleryData";
+import { lightboxDisplayCaption } from "../utils/galleryHelpers";
 import GalleryItem from "./GalleryItem";
 
 function Gallery() {
@@ -107,10 +108,12 @@ function Gallery() {
               </button>
               <img
                 src={selectedImage.src}
-                alt={selectedImage.title}
+                alt={lightboxDisplayCaption(selectedImage.title)}
                 className="w-full max-h-[62vh] object-contain bg-[var(--charcoal-mid)]"
               />
-              <div className="lightbox-caption">{selectedImage.title}</div>
+              <div className="lightbox-caption">
+                {lightboxDisplayCaption(selectedImage.title)}
+              </div>
             </div>
           </motion.div>
         )}
